@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>2-Column Sample</title>
+<meta charset="utf-8">
+<style>
+/* Reset and Container */
+body { font-family: Verdana, sans-serif; font-size: 1em; margin: 0; background-color: #f4f4f4; }
+#container { background-color: #FFF; width: 980px; margin: 0 auto; border: 2px solid #666; }
+
+/* Header and Logo */
+header { padding: 0px; background-color: #FFF; border-bottom: 2px solid #666; }
+
+/* Navigation */
+nav { background-color: #ffF; padding: 10px; border-bottom: 2px solid #666; padding-left: 290px; }
+nav a { color:#fff; font-size: 14px; padding:3px 8px; margin-right:10px; background-color:#336; text-decoration: none; display: inline-block; }
+
+/* 2-Column Layout */
+#sidebar { padding: 25px; float: left; width: 220px; }
+#content { 
+    padding: 10px 25px; 
+    margin-left: 270px; 
+    background-color: #FFF; 
+    background-image: url(images/week3-ex-bgthingy.gif); 
+    background-repeat: no-repeat; 
+}
+
+/* Specific Styles */
+.purplebox { background-color: #336; border: 2px dotted #fff; padding: 5px; font-size: 14px; color: #fff; margin-bottom: 10px; }
+.byline { background-color:#ccc; color: #336; font-size:12px; width: 150px; display:block; padding:5px; margin-bottom: 10px; }
+h1 { color: #336; }
+h2, h3 { color: #666; }
+
+/* Footer */
+footer { margin: 0px; background-color: #FFF; padding: 20px; clear: both; border-top: 2px solid #666; }
+</style>
+</head>
+<body>
+<div id="container">
+
+<header>
+  <img src="images/week-3-ex-werxlogo.gif" alt="design werx logo">
+</header>
+
+<nav>
+  <a href="#">About Us</a> <a href="#">Web Writing</a> <a href="#">Design Portfolio</a> <a href="#">Other Services</a> <a href="#">Awards</a>
+</nav>
+
+<div id="sidebar">
+  <aside>
+    <h3 class="purplebox">Related Articles &lt;article&gt; using the #sidebar ID</h3>
+    <p class="purplebox">Donec et ipsum et sapien vehicula nonummy. Suspendisse potenti.</p>
+    <p class="purplebox">Fusce varius urna id quam. Sed neque mi, varius eget, tincidunt nec, </p>
+    <p class="purplebox">suscipit id, libero. In eget purus. Vestibulum ut nisl. Donec eu mi sed turpis</p>
+    <p class="purplebox">feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien.</p>
+  </aside>
+</div>
+
+<main>
+  <div id="content">
+    <article>
+      <h1>Main Header &lt;main&gt;</h1>
+      <p class="byline">by the author</p>
+      
+      <h2>Header 2</h2>
+      <p>Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>
+      <ul>
+        <li>Donec eu mi sed turpis feugiat feugiat.</li>
+        <li>Integer turpis arcu</li>
+        <li>Pellentesque eget, cursus et, </li>
+        <li>Fermentum ut, sapien.</li>
+      </ul>
+
+      <p>Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>
+
+      <h3>Header 3</h3>
+      <p>Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero. Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien.</p>
+
+      <h3>Header 3</h3>
+      <p>Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero.</p>
+      
+      <p>Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien.</p>
+      <ul>
+        <li>Donec eu mi sed turpis feugiat feugiat.</li>
+        <li>Integer turpis arcu</li>
+        <li>Pellentesque eget, cursus et, </li>
+        <li>Fermentum ut, sapien. .</li>
+      </ul>
+
+      <h3>Header 3</h3>
+      <p>Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien.r turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien.Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero. Donec eu mi sed turpis feugiat feugiat. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero. Donec eu mi sed turpis feugiat feugiat. Intege</p>
+      <ul>
+        <li>Integer turpis arcu</li>
+        <li>Pellentesque eget</li>
+        <li>Cursus.</li>
+      </ul>
+
+      <h3>Header 3</h3>
+      <p>turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien.Integer turpis arcu, pellentesque eget, cursus et, fermentum ut, sapien. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero. Donec eu mi sed turpis feugiat feugiat. Fusce metus mi, eleifend sollicitudin, molestie id, varius et, nibh. Donec nec libero. Donec eu mi sed turpis feugiat feugiat. Intege</p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <p>Etiam leo pede, rhoncus venenatis, tristique in, vulputate at, odio. &lt;footer&gt;</p>
+</footer>
+
+</div>
+</body>
+</html>
