@@ -3,173 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portfolio | Exercises</title>
+    <title>Student Portfolio | Two-Column Layout</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        body{
+        body {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
             font-size: 16px;
             color: #e6eef5;
             margin: 0;
             padding: 0;
-
             background-image: url("IMG_2076.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
-        .bg-overlay{
+        .bg-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.45);
+            background: rgba(0,0,0,0.55);
             z-index: 0;
         }
 
-        #box{
-            width: 700px;
-            max-width: 90%;
+        #box {
+            width: 1100px; 
+            max-width: 95%;
             margin: 60px auto;
-            padding: 40px;
-            min-height: calc(100vh - 120px);
-
             background: rgba(10, 25, 40, 0.85);
             box-shadow: 0 20px 50px rgba(0,0,0,0.7);
             border-radius: 14px;
-
             position: relative;
             z-index: 1;
+            display: flex; 
+            overflow: hidden;
+            min-height: 80vh;
         }
 
-        header{
+        /* Sidebar */
+        #sidebar {
+            flex: 0 0 25%; 
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-right: 1px solid rgba(255,255,255,0.1);
+            box-sizing: border-box;
+        }
+
+        /* Main content */
+        #main-content {
+            flex: 0 0 75%; 
+            padding: 40px 50px;
+            box-sizing: border-box;
+        }
+
+        /* Header */
+        header {
             text-align: center;
-            padding: 40px 0;
+            padding-bottom: 30px;
             text-transform: uppercase;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 30px;
         }
 
-        header h1{
+        /* Logo style */
+        .logo {
+            width: 90px;
+            height: auto;
+            display: block;
+            margin: 0 auto 15px auto;
+            opacity: 0.95;
+        }
+
+        header h1 {
             font-family: 'Oswald', sans-serif;
-            font-size: 60px;
-            letter-spacing: 10px;
+            font-size: 50px;
+            letter-spacing: 8px;
             margin: 0;
             color: #ffffff;
         }
 
-        header p{
-            font-size: 12px;
+        header p.subtitle {
+            font-size: 11px;
             letter-spacing: 4px;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,0.5);
+            margin: 5px 0;
         }
 
-        h2{
+        h2 {
             font-family: 'Oswald', sans-serif;
+            font-size: 20px;
             text-transform: uppercase;
-            border-bottom: 2px solid rgba(255,255,255,0.3);
-            padding-bottom: 6px;
-            margin-top: 40px;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 8px;
+            margin-top: 0;
             color: #ffffff;
+            letter-spacing: 2px;
         }
 
-        .exercise-list{
+        .exercise-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        .exercise-item{
+        .exercise-item {
             display: flex;
-            justify-content: space-between;
-            padding: 12px 5px;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
+            flex-direction: column;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .exercise-item a{
+        .exercise-item a {
             text-decoration: none;
             color: #ffffff;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: 0.3s;
         }
 
-        .exercise-item a:hover{
-            text-decoration: underline;
+        .exercise-item a:hover {
+            color: #00d4ff;
         }
 
-        .points{
+        .points {
+            font-size: 11px;
             font-weight: bold;
-            color: rgba(255,255,255,0.8);
+            color: rgba(0, 212, 255, 0.6);
+            margin-top: 4px;
         }
 
-        ul{
-            padding-left: 18px;
-        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; }
+        li a { color: #00d4ff; text-decoration: none; }
+        li a:hover { text-decoration: underline; }
 
-        li a{
-            color: rgba(255,255,255,0.85);
-            text-decoration: none;
-        }
-
-        li a:hover{
-            text-decoration: underline;
-        }
-
-        footer{
-            text-align: center;
+        footer {
+            text-align: left;
             font-size: 10px;
-            margin-top: 60px;
-            color: rgba(255,255,255,0.5);
+            margin-top: 50px;
+            padding-top: 20px;
+            color: rgba(255,255,255,0.3);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 900px) {
+            #box { flex-direction: column; width: 95%; }
+            #sidebar, #main-content { flex: 0 0 100%; width: 100%; }
+            #sidebar { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
         }
     </style>
 </head>
-
 <body>
 
-    <div class="bg-overlay"></div>
+<div class="bg-overlay"></div>
 
-    <div id="box">
+<div id="box">
+    
+    <aside id="sidebar">
+        <h2>The Collection</h2>
+        <div class="exercise-list">
+            <div class="exercise-item"><a href="#">Home Page</a><span class="points">(1 PT)</span></div>
+            <div class="exercise-item"><a href="week2-cc-licenses.html">Semantic Tag</a><span class="points">(1 PT)</span></div>
+            <div class="exercise-item"><a href="week3-starter-layout.html">Emulate Layout</a><span class="points">(1 PT)</span></div>
+            <div class="exercise-item"><a href="#">Two-Column Layout</a><span class="points">(1 PT)</span></div>
+            <div class="exercise-item"><a href="#">Scannable Text</a><span class="points">(1 PT)</span></div>
+            <div class="exercise-item"><a href="#">Three-Column Layout</a><span class="points">(1 PT)</span></div>
+            <div class="exercise-item"><a href="#">Robot Uprising</a><span class="points">(1 PT)</span></div>
+            <div class="exercise-item"><a href="#">Big Red Dot</a><span class="points">(1 PT)</span></div>
+            <div class="exercise-item"><a href="#">Excelsior Designs</a><span class="points">(2 PTS)</span></div>
+        </div>
+    </aside>
 
+    <main id="main-content">
         <header>
-            <p>Student Portfolio</p>
+
+            <!-- Logo added here -->
+            <img src="logo.png" alt="Personal Logo" class="logo">
+
+            <p class="subtitle">Student Portfolio</p>
             <h1>Exercises</h1>
-            <p style="margin-top:10px;">Form Follows Performance</p>
+            <p class="subtitle">Exploring Digital Architecture</p>
         </header>
 
-        <h2>The Collection</h2>
-
-        <div class="exercise-list">
-            <div class="exercise-item"><span>Home Page</span><span class="points">(1)</span></div>
-            <div class="exercise-item"><a href="week2-cc-licenses.html">Semantic Tag</a><span class="points">(1)</span></div>
-            <div class="exercise-item"><a href="week3-starter-layout.html">Emulate the Layout Provided</a><span class="points">(1)</span></div>
-            <div class="exercise-item"><span>Create a Two-Column Layout</span><span class="points">(1)</span></div>
-            <div class="exercise-item"><span>Scannable Text with Original Typography</span><span class="points">(1)</span></div>
-            <div class="exercise-item"><span>Create a Three-Column Layout</span><span class="points">(1)</span></div>
-            <div class="exercise-item"><span>Robot Uprising</span><span class="points">(1)</span></div>
-            <div class="exercise-item"><span>Big Red Dot</span><span class="points">(1)</span></div>
-            <div class="exercise-item"><span>Excelsior Designs</span><span class="points">(2)</span></div>
-        </div>
-
         <h2>Manifesto</h2>
-        <p>
-            Exploring the balance between visual storytelling and technical precision.
-            This archive documents my journey through digital architecture and design.
+        <p style="line-height: 1.8; color: rgba(255,255,255,0.8);">
+            This archive documents my journey through digital architecture and design. 
+            I focus on the balance between visual storytelling and technical precision.
         </p>
 
-        <h2>Favorite Websites</h2>
-        <ul>
-            <li><a href="https://www.bbc.com/news" target="_blank">BBC News</a></li>
-            <li><a href="https://www.apple.com" target="_blank">Apple Design</a></li>
-        </ul>
+        <div style="margin-top: 40px;">
+            <h2>Favorite Websites</h2>
+            <ul>
+                <li><a href="https://www.bbc.com/news" target="_blank">BBC News</a></li>
+                <li><a href="https://www.apple.com" target="_blank">Apple Design</a></li>
+            </ul>
+        </div>
 
-        <h2>Interests</h2>
-        <p>Photography / Digital Painting / UI Design</p>
+        <div style="margin-top: 40px;">
+            <h2>Interests</h2>
+            <p>Photography / UI Design / Motion Graphics</p>
+        </div>
 
         <footer>
-            &copy; 2026 Crafted by Your Name
+            &copy; 2026 Crafted by Your Name | All Rights Reserved.
         </footer>
+    </main>
 
-    </div>
+</div>
 
 </body>
 </html>
-
-
-
