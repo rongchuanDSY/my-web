@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scannable Text | Robinson Crusoe</title>
+
+  <!-- Google Fonts: body = readable, headings = display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* scalable default: 62.5% => 1rem ≈ 10px */
+    html { font-size: 62.5%; }
+
+    body{
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.7rem;              /* scalable rem */
+      line-height: 1.8;
+      color: rgba(255,255,255,0.86);
+
+      background-image: url("IMG_2076.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;  /* fixed 会更卡 */
+    }
+
+    .bg-overlay{
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.60);
+      z-index: 0;
+    }
+
+    .wrap{
+      position: relative;
+      z-index: 1;
+      width: min(1000px, 92vw);
+      margin: 5.5rem auto;
+      padding: 4.2rem 4.2rem;
+      background: rgba(10, 25, 40, 0.88);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 14px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.65);
+    }
+
+    /* readable column width */
+    .content{
+      max-width: 68ch; /* classic readable width */
+      margin: 0 auto;
+    }
+
+    header{
+      text-align: left;
+      margin-bottom: 3.2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      padding-bottom: 2.2rem;
+    }
+
+    h1,h2,h3{
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12rem;
+      margin: 0 0 1.2rem 0;
+      color: #fff;
+    }
+
+    h1{ font-size: 4.6rem; line-height: 1.05; }
+    h2{ font-size: 2.4rem; margin-top: 2.8rem; }
+    h3{ font-size: 1.9rem; margin-top: 2.2rem; }
+
+    .subtitle{
+      margin: 0.8rem 0 0 0;
+      font-size: 1.2rem;
+      letter-spacing: 0.25rem;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      font-weight: 600;
+    }
+
+    .meta{
+      margin-top: 1.6rem;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      font-size: 1.3rem;
+      color: rgba(0,212,255,0.80);
+      letter-spacing: 0.12rem;
+      text-transform: uppercase;
+    }
+
+    p{ margin: 0 0 1.6rem 0; }
+
+    .lead{
+      font-size: 1.85rem;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .callout{
+      margin: 2.2rem 0;
+      padding: 1.6rem 1.8rem;
+      border-left: 4px solid rgba(0,212,255,0.95);
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+    }
+
+    ul{
+      margin: 1.0rem 0 2.0rem 0;
+      padding-left: 2.2rem;
+    }
+
+    li{
+      margin-bottom: 0.9rem;
+    }
+
+    strong{ color: #fff; font-weight: 600; }
+
+    .footer{
+      margin-top: 3.5rem;
+      padding-top: 2.0rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-size: 1.2rem;
+      letter-spacing: 0.18rem;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
+    @media (max-width: 700px){
+      body{ font-size: 1.6rem; }
+      .wrap{ padding: 2.6rem 2.2rem; margin: 3.0rem auto; }
+      h1{ font-size: 3.8rem; }
+      .content{ max-width: 60ch; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-overlay"></div>
+
+  <main class="wrap">
+    <div class="content">
+      <header>
+        <h1>Scannable Text</h1>
+        <p class="subtitle">Robinson Crusoe, Chapter IV</p>
+        <div class="meta">
+          <span>Daniel Defoe</span>
+          <span>First Weeks</span>
+          <span>Survival Work</span>
+        </div>
+      </header>
+
+      <section>
+        <h2>What is happening</h2>
+        <p class="lead">
+          Crusoe stops wishing and starts building. He makes a raft from ship materials, then loads it with supplies and tries to reach shore safely.
+        </p>
+
+        <div class="callout">
+          <strong>Main problem:</strong> He has no sail, oar, or rudder, so even a small wind could flip the raft.
+        </div>
+      </section>
+
+      <section>
+        <h2>Step by step</h2>
+
+        <h3>1) Build the raft</h3>
+        <ul>
+          <li>Throws wood spars and mast pieces overboard, ties each with rope so they do not drift away.</li>
+          <li>Ties four pieces together, adds short planks across the top.</li>
+          <li>Reinforces it by cutting a topmast into three parts and adding them (hard work, but necessary).</li>
+        </ul>
+
+        <h3>2) Decide what to take</h3>
+        <ul>
+          <li>Loads boards and uses <strong>three seamen’s chests</strong> to organize cargo.</li>
+          <li>Focuses on what he will need first on shore: <strong>food, tools, and weapons</strong>.</li>
+        </ul>
+
+        <h3>3) Attempt the trip</h3>
+        <ul>
+          <li>Encouragements: calm sea, rising tide toward shore, light wind toward land.</li>
+          <li>Raft drifts, suggesting an inlet or river nearby, which could work as a landing port.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Inventory snapshot</h2>
+
+        <h3>Food and drink</h3>
+        <ul>
+          <li><strong>Provisions:</strong> bread, rice, three Dutch cheeses, dried goat flesh, remaining European corn.</li>
+          <li><strong>Loss:</strong> barley and wheat ruined by rats.</li>
+          <li><strong>Liquors:</strong> cordial waters and about five to six gallons of rack.</li>
+        </ul>
+
+        <h3>Tools and weapons</h3>
+        <ul>
+          <li><strong>Tools:</strong> carpenter’s chest (more valuable than gold to him), plus saws, axe, hammer.</li>
+          <li><strong>Arms:</strong> two fowling pieces, two pistols, powder horns, shot, two old swords, powder barrels (two dry, one water damaged).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Risk moment</h2>
+        <p>
+          Near shore, the raft runs aground on a shoal. The cargo almost slides into the water. He braces against the chests and holds them in place until the tide rises enough to re-float the raft.
+        </p>
+        <p>
+          He pushes into the channel and ends up in the mouth of a small river, staying near the coast in hope of seeing ships.
+        </p>
+      </section>
+
+      <div class="footer">
+        Robinson Crusoe | Chapter IV | Daniel Defoe (1661?–1731)
+      </div>
+    </div>
+  </main>
+</body>
+</html>
