@@ -1,0 +1,261 @@
+/* 基础重置 */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#d9d7d3;
+font-family:'Lato',sans-serif;
+line-height:1.6;
+}
+
+
+/* ===================================================== */
+/* HEADER 顶部背景装饰                                   */
+/* 使用图片：topgradient.png                             */
+/* 作用：顶部金色渐变背景                                */
+/* ===================================================== */
+
+header{
+background:url(images/topgradient.png) repeat-x;
+height:200px;
+position:relative;
+text-align:center;
+padding-top:40px;
+}
+
+header h1{
+font-family:'Playfair Display',serif;
+font-size:36px;
+}
+
+header p{
+color:#333;
+margin-top:5px;
+}
+
+
+/* ===================================================== */
+/* LOGO rollover 效果                                    */
+/* 默认背景图：toaster2.png                              */
+/* hover背景图：toaster2-roll.png                        */
+/* HTML中的 toaster2-blank.png 是透明前景图              */
+/* ===================================================== */
+
+#logo{
+position:absolute;
+top:10px;
+left:20px;
+width:141px;
+height:150px;
+
+/* 默认机器人图 */
+
+background:url(images/toaster2.png);
+}
+
+#logo:hover{
+
+/* 鼠标悬停时机器人变化 */
+
+background:url(images/toaster2-roll.png);
+}
+
+#logo img{
+
+/* 透明前景图 */
+
+display:block;
+}
+
+
+/* ===================================================== */
+/* 顶部导航按钮                                          */
+/* hover 时使用火焰纹理                                  */
+/* 图片：flames5.png                                     */
+/* ===================================================== */
+
+.topnav{
+list-style:none;
+margin-top:20px;
+}
+
+.topnav li{
+display:inline-block;
+}
+
+.topnav a{
+display:block;
+padding:8px 16px;
+background:#f7941d;
+color:white;
+text-decoration:none;
+margin:5px;
+font-weight:bold;
+}
+
+.topnav a:hover{
+
+/* hover 火焰背景 */
+
+background:url(images/flames5.png);
+}
+
+
+/* ===================================================== */
+/* 页面主体容器                                          */
+/* 侧边渐变背景                                          */
+/* 图片：toaster-sidegradient.jpg                        */
+/* ===================================================== */
+
+#container{
+width:80%;
+max-width:1260px;
+min-width:780px;
+margin:40px auto;
+background:white;
+
+/* 左侧金色渐变装饰 */
+
+background-image:url(images/toaster-sidegradient.jpg);
+background-repeat:repeat-y;
+
+/* 页面阴影 */
+
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+}
+
+
+
+/* ===================================================== */
+/* LEFT SIDEBAR                                          */
+/* ===================================================== */
+
+.sidebar-left{
+width:20%;
+float:left;
+padding:25px;
+}
+
+.sidebar-left h3{
+
+/* 白色卡片 */
+
+background:white;
+padding:10px;
+
+/* 圆角 */
+
+border-radius:12px;
+}
+
+
+/* ===================================================== */
+/* 左侧按钮                                              */
+/* hover 火焰效果                                        */
+/* ===================================================== */
+
+.nav-buttons{
+list-style:none;
+margin-top:20px;
+}
+
+.nav-buttons a{
+
+/* display block 是评分点 */
+
+display:block;
+
+width:160px;
+
+background:#e7e2db;
+
+padding:8px;
+margin-bottom:10px;
+
+/* 圆角按钮 */
+
+border-radius:20px;
+
+text-decoration:none;
+color:#333;
+font-weight:600;
+}
+
+.nav-buttons a:hover{
+
+/* hover 火焰装饰 */
+
+background:url(images/flames5.png);
+color:white;
+}
+
+
+
+/* ===================================================== */
+/* MAIN CONTENT                                          */
+/* ===================================================== */
+
+.main-content{
+width:55%;
+float:left;
+padding:35px;
+}
+
+h2{
+color:#f7941d;
+margin-bottom:20px;
+}
+
+h3{
+color:#f7941d;
+margin:15px 0;
+}
+
+
+
+/* ===================================================== */
+/* RIGHT SIDEBAR                                         */
+/* ===================================================== */
+
+.sidebar-right{
+width:25%;
+float:left;
+padding:30px;
+}
+
+.sidebar-right ul{
+list-style:none;
+}
+
+.sidebar-right li{
+margin-bottom:10px;
+}
+
+
+
+/* ===================================================== */
+/* 清除 float                                            */
+/* ===================================================== */
+
+#container::after{
+content:"";
+display:table;
+clear:both;
+}
+
+
+
+/* ===================================================== */
+/* FOOTER                                                */
+/* ===================================================== */
+
+footer{
+text-align:center;
+padding:20px;
+background:#eee;
+margin-top:40px;
+}
